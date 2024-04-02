@@ -2,3 +2,6 @@
 Repository for Tranidiomation project
 
 [Link to project proposal]()
+
+## How to Run
+
