@@ -26,6 +26,6 @@ def create_two_shot_prompt(source_text:str, source_language:str, target_language
 
     return 0
 
-def create_five_prompt(source_text:str, source_language:str, target_language:str) -> list:
+def create_five_shot_prompt(source_text:str, source_language:str, target_language:str) -> list:
 
     return 0
