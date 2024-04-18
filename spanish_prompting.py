@@ -17,15 +17,22 @@ head_prompt="Translate the sentence into Spanish."
 file_path = "./data/json/spanish_baseline_prompt_output.json"
 '''
 
+
 ''' Uncomment for step-by-step prompting 
-head_prompt="Translate the sentence into Spanish following these steps:\nStep 1. Identify the idiom.\nStep 2. Find an equivalent idiom in the target language. If there is no equivalent idiom, translate the idiom according to its meaning.\nStep 3. Give a translation of the sentence including that idiom."
-file_path = "./data/json/spanish_step_by_step_prompt_output.json"
+ head_prompt="Translate the sentences into Spanish following these steps:\nStep 1. Identify the idiom.\nStep 2. Find an equivalent idiom in the target language. If there is no equivalent idiom, translate the idiom according to its meaning.\nStep 3. Give a Spanish translation of the sentence including that idiom."
+ file_path = "./data/json/spanish_step_by_step_prompt_output.json"
+'''
+ 
+ 
+'''Uncommentfor CoT few shot prompting
+head_prompt = "User: 'When I learn Spanish at the Spanish Academy exams are a piece of cake.'\nAssistant: Step 1. The idiom in the sentence is 'a piece of cake'\n Step 2. The idiom translates to 'pan comido'\nStep3. Full sentence translates to 'Cuando aprendo espanol en 'The Spanish Academy' los examenes son pan comido.' , User: 'Whenever I try to concentrate in math class, I end up having my head in the clouds.'\nAssistant: Step 1. The idiom in the sentence is 'head in the clouds'\nStep 2. The idiom translates to 'estar en las nubes'\nStep 3. Full sentence translates to 'Siempre que intento concentrarme en la clase de matemáticas, termino estando en las nubes.'"
+file_path = "./data/json/spanish_cot_prompt_output.json"
+
 '''
 
-'''Uncommoentfor CoT few shot prompting
-head_prompt = "User: Cuando aprendo espanol en 'The Spanish Academy' los examenes son pan comido. \nAssistant: Step 1. The idiom in the sentence is 'pan comido'\nStep 2. The idiom translates to 'a piece of cake' \nStep 3. Full sentence translates to 'When I learn Spanish at the Spanish Academy exams are a piece of cake.', User: Siempre que intento concentrarme en la clase de matemáticas, termino estando en las nubes.\nAssistant: Step 1. The idiom in the sentence is 'estar en las nubes.'\nStep 2. The idiom translates to 'have one's head in the clouds,' which means to be distracted or daydreaming.\nStep 3. Full sentence translates to 'Whenever I try to concentrate in math class, I end up having my head in the clouds.'"
+head_prompt = "User: 'When I learn Spanish at the Spanish Academy exams are a piece of cake.'\nAssistant: Step 1. The idiom in the sentence is 'a piece of cake'\n Step 2. The idiom translates to 'pan comido'\nStep3. Full sentence translates to 'Cuando aprendo espanol en 'The Spanish Academy' los examenes son pan comido.' , User: 'Whenever I try to concentrate in math class, I end up having my head in the clouds.'\nAssistant: Step 1. The idiom in the sentence is 'head in the clouds'\nStep 2. The idiom translates to 'estar en las nubes'\nStep 3. Full sentence translates to 'Siempre que intento concentrarme en la clase de matemáticas, termino estando en las nubes.'"
 file_path = "./data/json/spanish_cot_prompt_output.json"
-'''
+
 
 sentences = [
   "It is up to Castro and Roque to show what they are made of and get in the bandwagon.",
