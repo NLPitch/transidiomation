@@ -47,16 +47,16 @@ pl_data = pl.concat(
     how='align'
 )
 
-pl_data = pl_data.select(
-    pl.col(['Idiom', 'Sentence', 'Translation', 'Matching']),
-    pl.col(['one_experiment', 'two_experiment', 'five_experiment']).str.split('Step 1.').list.get(1)
-).with_columns(
-    pl.col(['one_experiment', 'two_experiment', 'five_experiment']).str.split('Step 2.').list.get(0)
-)
-
-# pl_data = pl_data.with_columns(
-#     pl.col(['one_experiment', 'two_experiment', 'five_experiment']).str.split('Step 3.').list.get(1)
+# pl_data = pl_data.select(
+#     pl.col(['Idiom', 'Sentence', 'Translation', 'Matching']),
+#     pl.col(['zero_experiment', 'one_experiment', 'two_experiment', 'five_experiment']).str.split('Step 1.').list.get(1)
+# ).with_columns(
+#     pl.col(['zero_experiment', 'one_experiment', 'two_experiment', 'five_experiment']).str.split('Step 2.').list.get(0)
 # )
+
+pl_data = pl_data.with_columns(
+    pl.col(['zero_experiment', 'one_experiment', 'two_experiment', 'five_experiment']).str.split('Step 3.').list.get(1)
+)
 
 # pl_data = load_data('/home/yaoyi/pyo00005/CSci5541/transidiomation/output/one_step.xlsx')
 
@@ -66,8 +66,8 @@ print(pl_data.columns)
 # pl_data = pl_data.with_columns(
 #     open_ai_one_step = pl.col('Sentence').map_elements(lambda x: prompt_openai(x))
 # )
-
-save_data(pl_data, 'all_idiom_identify', '.xlsx')
+save_data(pl_data, 'all_translation', '.xlsx')
+# save_data(pl_data, 'all_idiom_identify', '.xlsx')
 
 # input_message = {
 #     'zero-shot': [{"role": "user", "content": f"Translate {source_text} to English"}],
