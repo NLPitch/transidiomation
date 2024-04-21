@@ -1,0 +1,650 @@
+[
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'get in the bandwagon'\nStep 2. The idiom translates to 'subirse al carro'\nStep 3. Full sentence translates to 'Depende de Castro y Roque demostrar de qué están hechos y subirse al carro.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'lost cause'\nStep 2. The idiom translates to 'causa perdida'\nStep 3. Full sentence translates to 'A pesar de saber que era casi imposible ganar, Peter seguía luchando por una causa perdida.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'throw away the towel'\nStep 2. The idiom translates to 'tirar la toalla'\nStep 3. Full sentence translates to 'Después de varios intentos fallidos, John decidió tirar la toalla y dejar el curso de francés.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nStep 1. The idiom in the sentence is 'when a door is closed, a window opens'\nStep 2. The idiom translates to 'cuando se cierra una puerta, se abre una ventana'\nStep 3. Full sentence translates to 'Perdí mi trabajo, pero obtuve una oportunidad aún mejor. Es cierto que cuando se cierra una puerta, se abre una ventana.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nStep 1. The idiom in the sentence is 'a plug' \nStep 2. The idiom translates to 'tener un enchufe'\nStep 3. Full sentence translates to 'Él consiguió ese trabajo no por su talento, sino porque tiene un enchufe en la compañía.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nStep 1. The idiom in the sentence is 'bite the hand that feeds you'\nStep 2. The idiom translates to 'morder la mano que te da de comer'\nStep 3. Full sentence translates to 'Deberías estar agradecido con tu jefe y no criticarlo tanto; no muerdas la mano que te da de comer.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'shoemaker's son'\nStep 2. The idiom translates to 'hijo del zapatero'\nStep 3. Full sentence translates to 'Es fascinante que el mecánico tenga su carro averiado. Como se dice, el hijo del zapatero siempre anda descalzo.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'a devil you know is better than the one you don't'\nStep 2. The idiom translates to 'más vale malo conocido que bueno por conocer'\nStep 3. Full sentence translates to 'Decidí quedarme en mi trabajo actual; más vale malo conocido que bueno por conocer.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the first sentence is 'out of the ordinary'\nStep 2. The idiom translates to 'fuera de lo común'\nStep 3. Full sentence translates to 'Ella siempre tiene ideas fuera de lo común; En la escuela la consideraban una rarita.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'in the boonies'\nStep 2. The idiom translates to 'en el quinto infierno'\nStep 3. Full sentence translates to 'El restaurante al que fuimos a cenar en el quinto infierno, nos tomó casi una hora llegar allí.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": " \nAssistant: Step 1. The idiom in the sentence is 'loaded'\nStep 2. The idiom translates to 'tener mucho dinero'\nStep 3. Full sentence translates to 'Después de vender su empresa, ahora tiene mucho dinero y puede comprar lo que quiera.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'kicked the bucket'\nStep 2. The idiom translates to 'morir'\nStep 3. Full sentence translates to 'El viejo coche de Carlos finalmente murió en medio del viaje.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'the apple doesn't fall far from the tree'\nStep 2. The idiom translates to 'la manzana no cae lejos del árbol'\nStep 3. Full sentence translates to 'John es tan bueno en matemáticas como lo fue su padre; la manzana no cae lejos del árbol.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "'\nAssistant: Step 1. The idiom in the sentence is 'killing two birds with one stone'\nStep 2. The idiom translates to 'matar dos pájaros de un tiro'\nStep 3. Full sentence translates to 'Al comprar los billetes de tren con anticipación, ahorramos dinero y aseguramos nuestro viaje, matando dos pájaros de un tiro.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'what the eye doesn't see, the heart doesn't grieve over'\nStep 2. The idiom translates to 'lo que no se ve, el corazón no lo siente'\nStep 3. Full sentence translates to 'Prefiero no saber lo que pasó en esa fiesta porque, como dice el refrán, lo que no se ve, el corazón no lo siente.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'all that glitters is not gold'\nStep 2. The idiom translates to 'no todo lo que brilla es oro'\nStep 3. Full sentence translates to 'Ese reloj parece muy caro, pero recuerda que no todo lo que brilla es oro.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'a nobody'\nStep 2. The idiom translates to 'un nadie'\nStep 3. Full sentence translates to 'Aunque era un nadie en su pueblo, se mudó a la ciudad y logró hacerse famoso.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'two in distress makes sorry less'\nStep 2. The idiom translates to 'dos en apuros hacen que lo siento menos'\nStep 3. Full sentence translates to 'Después de hablar con mi amigo sobre mis problemas, me sentí mejor; es cierto que dos en apuros hacen que lo siento menos.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'come out of the closet'\nStep 2. The idiom translates to 'salir del armario'\nStep 3. Full sentence translates to 'Juan decidió salir del armario y contarle a sus padres sobre su orientación sexual.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'the straw that broke the camel's back'\nStep 2. The idiom translates to 'la gota que colmó el vaso'\nStep 3. Full sentence translates to 'Cuando ella se olvidó de nuestro aniversario, fue la gota que colmó el vaso y decidí terminar la relación.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "'\nStep 1. The idiom in the sentence is 'nothing written about'\nStep 2. The idiom doesn't have a direct translation, but it means that there are no specific rules or expectations.\nStep 3. Full sentence translates to 'A ella le encanta la música clásica y a él le encanta el rock pesado, pero no hay nada escrito sobre gustos.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'happy as a clam'\nStep 2. The idiom translates to 'feliz como una almeja'\nStep 3. Full sentence translates to 'Él estaba feliz como una almeja cuando recibió la noticia de que había aprobado el examen.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'looks can be deceiving'\nStep 2. The idiom translates to 'las apariencias engañan'\nStep 3. Full sentence translates to 'Parecía un lugar sencillo y humilde, pero la comida era increíblemente buena. Sin duda, las apariencias engañan.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'spice of life'\nStep 2. The idiom translates to 'la sal de la vida'\nStep 3. Full sentence translates to 'Me gusta probar comidas de diferentes culturas porque la variedad es la sal de la vida.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'big fish'\nStep 2. The idiom translates to 'pez grande'\nStep 3. Full sentence translates to 'Se convirtió en un pez grande en la industria después de que su invención revolucionara el mercado.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nStep 1. The idiom in the sentence is 'brain over brawn'\nStep 2. The idiom translates to 'inteligencia sobre fuerza'\nStep 3. Full sentence translates to 'Cuando intentas abrir ese frasco, recuerda que la inteligencia es más importante que la fuerza.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'call a spade a spade'\nStep 2. The idiom translates to 'llamar al pan, pan y al vino, vino'\nStep 3. Full sentence translates to 'Siempre me gusta hablar con franqueza, llamar a las cosas por su nombre, para que todos sepamos dónde estamos parados.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'scratch my back I'll scratch yours'\nStep 2. The idiom translates to 'ayudarme y te ayudaré'\nStep 3. Full sentence translates to 'Gracias por ayudarme con la mudanza. Recuerda, tú me ayudas y yo te ayudaré.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'nothing ventured, nothing gained'\nStep 2. The idiom translates to 'no hay ganancia sin riesgo'\nStep 3. Full sentence translates to 'Él decidió invertir en un nuevo negocio, pensando que no hay ganancia sin riesgo.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "'\nAssistant: \nStep 1. The idiom in the sentence is 'barking dogs never bite'\nStep 2. The idiom translates to 'perro que ladra no muerde'\nStep 3. Full sentence translates to 'No te preocupes por sus amenazas, perro que ladra no muerde.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'better to prevent than to cure'\nStep 2. The idiom translates to 'mejor prevenir que curar'\nStep 3. Full sentence translates to 'Siempre llevo un paraguas en mi bolsa, porque es mejor prevenir que curar.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'being a clown'\nStep 2. The idiom translates to 'hacer el payaso'\nStep 3. Full sentence translates to 'Los niños estaban haciendo el payaso en el patio de recreo y no podían dejar de reír.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "'\nAssistant: Step 1. The idiom in the sentence is 'silver lining'\nStep 2. The idiom translates to 'lado positivo'\nStep 3. Full sentence translates to 'Aunque me despidieron, encontré un trabajo mejor, así que todo tiene su lado positivo.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "'\nAssistant: Step 1. The idiom in the sentence is 'all roads lead to Rome'\nStep 2. The idiom translates to 'todos los caminos llevan a Roma'\nStep 3. Full sentence translates to 'No importa que método uses para estudiar, todos los caminos llevan a Roma.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "'\nStep 1. The idiom in the sentence is 'bad apple'\nStep 2. The idiom translates to 'manzana podrida'\nStep 3. Full sentence translates to 'No es bueno lidiar con él cuando está enojado porque es una manzana podrida.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'icebreaker'\nStep 2. The idiom translates to 'rompehielos'\nStep 3. Full sentence translates to 'En la fiesta, Juan contó un chiste rompehielos y todos se relajaron.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idioms in the sentence are 'birds of a feather' and 'flock together'\nStep 2. The idioms translate to 'aves de la misma pluma' and 'volar juntas', respectively.\nStep 3. Full sentence translates to 'Mira a esos políticos corruptos juntos; las aves de la misma pluma vuelan juntas.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nStep 1. The idiom in the sentence is 'better half'\nStep 2. The idiom translates to 'media naranja'\nStep 3. Full sentence translates to 'Ella no sólo es mi esposa, también es mi media naranja.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "'\nAssistant: Step 1. The idiom in the sentence is 'screwed up'\nStep 2. The idiom translates to 'meter la pata' or 'hacer una metida de pata'\nStep 3. Full sentence translates to 'Metí la pata cuando me olvidé de nuestro aniversario de bodas.' ",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'flip-flopper'\nStep 2. The idiom translates to 'cambiante'\nStep 3. Full sentence translates to 'Cambió de equipo cuando su equipo empezó a perder; es un verdadero cambiante.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'a word to the wise'\nStep 2. The idiom translates to 'una palabra para el sabio'\nStep 3. Full sentence translates to 'No necesito explicártelo, una palabra para el sabio es suficiente.' ",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'you snooze, you loose'\nStep 2. The idiom translates to 'el que se duerme, pierde'\nStep 3. Full sentence translates to 'Salí un momento, y cuando volví mi hermano había tomado mi lugar en el sofá. El que se duerme, pierde.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nStep 1. The idiom in the sentence is 'got drunk'\nStep 2. The idiom translates to 'se emborrachó'\nStep 3. Full sentence translates to En la celebración se emborrachó; ni siquiera podía hablar.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'crazy'\nStep 2. The idiom translates to 'loco'\nStep 3. Full sentence translates to 'Mi tío siempre está haciendo cosas raras, él está loco.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": " Assistant: Step 1. The idiom in the sentence is 'a piece of cake'\nStep 2. The idiom translates to 'pan comido'\nStep 3. Full sentence translates to 'No te preocupes por el examen de mañana, va a ser pan comido.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nStep 1. The idiom in the sentence is 'just in case'\nStep 2. The idiom translates to 'por si acaso'\nStep 3. Full sentence translates to 'Voy a llevar un paraguas por si acaso, parece que podría llover.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'sucking up'\nStep 2. The idiom translates to 'adular'\nStep 3. Full sentence translates to 'John siempre está adulando al jefe para conseguir lo que quiere.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'lend a hand'\nStep 2. The idiom translates to 'echar una mano'\nStep 3. Full sentence translates to 'Cuando su compañero se enfermó, Maria echó una mano para ayudar a terminar el proyecto.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'feel worthless'\nStep 2. The idiom translates to 'sentirse sin valor'\nStep 3. Full sentence translates to 'En ese gran grupo, me siento sin valor, nadie se da cuenta si estoy allí o no.' ",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'cost me an arm and a leg'\nStep 2. The idiom translates to 'costarme un ojo de la cara'\nStep 3. Full sentence translates to 'Ese reloj me costó un ojo de la cara, pero vale cada centavo.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nStep 1. The idiom in the sentence is 'every now and then'\nStep 2. The idiom translates to 'de vez en cuando'\nStep 3. Full sentence translates to 'Mi hermano me llama de vez en cuando; él es muy necesitado.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "'\nAssistant: Step 1. The idiom in the sentence is 'complicate things'\nStep 2. The idiom translates to 'complicar las cosas'\nStep 3. Full sentence translates to 'No compliques la situación haciendo las cosas más complicadas de lo necesario, es bastante simple.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'few of us' and 'almost no one'\nStep 2. The idiom translates to 'pocos de nosotros' and 'casi nadie'\nStep 3. Full sentence translates to 'Éramos muy pocos en la reunión, casi nadie asistió.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nStep 1. The idiom in the sentence is 'in the boonies'\nStep 2. The idiom translates to 'en el quinto pino'\nStep 3. Full sentence translates to 'El hotel estaba en el quinto pino, tuvimos que caminar mucho para llegar al centro.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'feels like hell'\nStep 2. The idiom translates to 'se siente como el infierno'\nStep 3. Full sentence translates to 'Desde el inicio del invierno, se siente como el infierno, no he dejado de enfermarme.' ",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "'\nAssistant: Step 1. The idiom in the sentence is 'too cool'\nStep 2. The idiom translates to 'demasiado guay'\nStep 3. Full sentence translates to 'Ese coche nuevo es demasiado guay, todos se fijan en él.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'make a mountain out of a molehill'\nStep 2. The idiom translates to 'hacer una montaña de un grano de arena'\nStep 3. Full sentence translates to 'Él hizo una montaña de un grano de arena al tratar de mediar en esos problemas familiares.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'stubborn as a mule'\nStep 2. The idiom translates to 'ser terco como una mula'\nStep 3. Full sentence translates to 'Aunque todos le aconsejan lo contrario, él sigue terco como una mula y no quiere vender la casa.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'involved in corruption scandals'\nStep 2. The idiom translates to 'involucrado en escándalos de corrupción'\nStep 3. Full sentence translates to 'Ese político es un ladrón, siempre está involucrado en escándalos de corrupción.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'your phone is ancient'\nStep 2. The idiom translates to 'tu teléfono es antiquísimo'\nStep 3. Full sentence translates to '¡Tu teléfono es antiquísimo!'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'thrown under the bus'\nStep 2. The idiom translates to 'abandonar a su suerte' or 'sacrificar'\nStep 3. Full sentence translates to 'Los soldados novatos suelen ser abandonados a su suerte en grandes conflictos.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'in a bad mood'\nStep 2. The idiom translates to 'de mal humor'\nStep 3. Full sentence translates to 'No hables con el jefe hoy, está de mal humor porque las ventas están bajas.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'thin as a rail'\nStep 2. The idiom translates to 'delgado como un palo'\nStep 3. Full sentence translates to 'Después de tantos meses en el gimnasio, él está delgado como un palo.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'soaked to the bone'\nStep 2. The idiom translates to 'empapado hasta los huesos'\nStep 3. Full sentence translates to 'Con tanta lluvia, llegué a casa y quedé empapado hasta los huesos.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'give a damn'\nStep 2. The idiom translates to 'importar un comino'\nStep 3. Full sentence translates to 'A él no le importa un comino lo que piensen otras personas de su estilo.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1: The idiom in the sentence is 'holy moley!'\nStep 2. The idiom has no direct translation in Spanish.\nStep 3. Full sentence translates to '¡Santo cielo! ¿Viste eso? ¡El coche casi choca!'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\n\nAssistant: Step 1. The idiom in the sentence is 'fed up'\nStep 2. The idiom translates to 'estar harto/a'\nStep 3. Full sentence translates to 'Estoy harto/a de tus quejas.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": " \n\nAssistant: Step 1. The idiom in the sentence is 'makes my mouth water'\nStep 2. The idiom translates to 'hace que se me haga agua la boca'\nStep 3. Full sentence translates to 'Solo de pensar en la paella que mi abuela hace, se me hace agua la boca.' ",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'up to my neck'\nStep 2. The idiom translates to 'hasta el cuello'\nStep 3. Full sentence translates to 'Con todas estas deudas, estoy hasta el cuello.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "'\nAssistant: Step 1. The idiom in the sentence is 'lend a hand'\nStep 2. The idiom translates to 'echar una mano'\nStep 3. Full sentence translates to 'Si necesitas ayuda con la mudanza, puedo echarte una mano.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'immersed into'\nStep 2. The idiom translates to 'sumergido en'\nStep 3. Full sentence translates to 'Se sumergió por completo en el proyecto y no había salido de su oficina en días.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'get my foot down'\nStep 2. The idiom translates to 'bajar el pie'\nStep 3. Full sentence translates to 'Estaba tan nervioso durante la entrevista que no podía bajarme el pie.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nStep 1. The idiom in the sentence is 'look on the bright side'\nStep 2. The idiom translates to 'mirar el lado positivo'\nStep 3. Full sentence translates to 'Aunque recibió malas noticias, ella miró el lado positivo'.",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'runs out of'\nStep 2. The idiom translates to 'se le acaban'\nStep 3. Full sentence translates to 'Ella puede hablar mucho, nunca se le acaban los temas de conversación.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'wrong side of the bed'\nStep 2. The idiom translates to 'levántate con el pie izquierdo'\nStep 3. Full sentence translates to 'Hoy me desperté levantándome con el pie izquierdo y todo me salió mal.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'sleep a wink'\nStep 2. The idiom translates to 'dormir ni una pizca'\nStep 3. Full sentence translates to 'Estaba tan preocupado que no dormí ni una pizca en toda la noche.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'over the moon'\nStep 2. The idiom translates to 'en la luna'\nStep 3. Full sentence translates to 'Cuando le dijeron que había ganado el premio, él estaba en la luna.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'when it rains, it pours'\nStep 2. The idiom translates to 'cuando llueve, diluvia'\nStep 3. Full sentence translates to 'Desde que perdió su trabajo, parece que no puede tener un respiro; ya sabes, cuando llueve, diluvia.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nStep 1. The idiom in the sentence is 'while it lasted'\nStep 2. The idiom translates to 'mientras duró'\nStep 3. Full sentence translates to 'Terminamos nuestra relación amistosamente; fue agradable mientras duró.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'to each his own'\nStep 2. The idiom translates to 'cada uno a lo suyo'\nStep 3. Full sentence translates to 'No es el tipo de carro que yo compraría, pero cada uno a lo suyo.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the first sentence is 'beaten me'\nStep 2. The idiom translates to 'vencido/a'\nStep 3. Full sentence translates to 'Pensaron que me habían vencido, pero gané el juicio.'\nStep 4. The idiom in the second sentence is 'laughs last'\nStep 5. The idiom translates to 'se ríe el último'\nStep 6. Full sentence translates to 'El que se ríe el último, se ríe mejor.'\n",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nStep 1. The idiom in the sentence is 'slow at doing everything'\nStep 2. The idiom translates to 'lento para hacer todo'\nStep 3. Full sentence translates to 'Siempre llega tarde a sus citas, es muy lento para hacer todo.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'takes two to tango'\nStep 2. The idiom translates to 'se necesitan dos para bailar tango'\nStep 3. Full sentence translates to 'El amor necesita dos para bailar tango, y si ustedes dos se gustan, no los detendré.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'room for more'\nStep 2. The idiom translates to 'espacio para más'\nStep 3. Full sentence translates to 'No te preocupes por quedarte a cenar, siempre hay espacio para más.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'getting up early'\nStep 2. The idiom translates to 'levantarse temprano'\nStep 3. Full sentence translates to 'No te agobies trabajando toda la noche, levantarse temprano no hace que el sol salga más rápido.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "it's just a pipedream for me.\nAssistant: Step 1. The idiom in the sentence is 'pipedream'\nStep 2. The idiom translates to 'sueño imposible'\nStep 3. Full sentence translates to '¿Cancelar nuestras vacaciones? ¡Ni hablar! Es solo un sueño imposible para mi.' ",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nStep 1. The idiom in the sentence is 'beat around the bush'\nStep 2. The idiom translates to 'dar vueltas a las cosas'\nStep 3. Full sentence translates to 'Cuando le pregunté sobre el dinero, dio vueltas a las cosas y nunca dio una respuesta clara.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the first sentence is 'that's life'\nStep 2. The idiom translates to 'así es la vida'\nStep 3. Full sentence translates to 'Me hubiera gustado ganar, pero perdí. Así es la vida.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nStep 1. The idiom in the sentence is 'sleeping dogs lie'\nStep 2. The idiom translates to 'dejar dormir a los perros'\nStep 3. Full sentence translates to 'No empieces a buscar problemas donde no los hay, deja dormir a los perros.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'wipe the slate clean'\nStep 2. The idiom translates to 'empezar de cero' or 'borrar el pasado'\nStep 3. Full sentence translates to 'Decidimos dejar los problemas atrás y empezar de cero en nuestra amistad.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": " Assistant: Step 1. The idiom in the sentence is 'drown his sorrows'\nStep 2. The idiom translates to 'ahogar sus penas'\nStep 3. Full sentence translates to 'Después de la ruptura, él fue al bar para ahogar sus penas con alcohol.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'all in due time'\nStep 2. The idiom translates to 'todo a su debido tiempo'\nStep 3. Full sentence translates to 'Quiero que nuestra relación avance a la próxima etapa, pero todo a su debido tiempo.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'twelve hours straight'\nStep 2. The idiom translates to 'doce horas seguidas'\nStep 3. Full sentence translates to 'Después de trabajar doce horas seguidas, estaba cansado.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'hook up'\nStep 2. The idiom translates to 'ligar'\nStep 3. Full sentence translates to 'En la fiesta, ella intentó ligar con alguien con su nuevo look.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nStep 1. The idiom in the sentence is 'count me in'\nStep 2. The idiom translates to 'me incluyo'\nStep 3. Full sentence translates to'Si necesita ayuda con la mudanza, me incluyo.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'hit the nail on the head'\nStep 2. The idiom translates to 'acertar en el clavo'\nStep 3. Full sentence translates to 'Cuando sugirió cambiar la estrategia de marketing, realmente acertó en el clavo.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'here we go again'\nStep 2. The idiom translates to 'aquí vamos de nuevo'\nStep 3. Full sentence translates to 'Empezó a llover justo cuando nos fuimos, aquí vamos de nuevo.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'long weekend'\nStep 2. The idiom translates to 'fin de semana largo'\nStep 3. Full sentence translates to 'El martes es feriado, así que tendremos un fin de semana largo y no volveremos al trabajo hasta el miércoles.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nStep 1. The idiom in the sentence is 'the door was slammed in my face'\nStep 2. The idiom translates to 'la puerta me cerraron en la cara'\nStep 3. Full sentence translates to 'Fui a comprar boletos, pero cerraron justo antes de que yo llegara y me cerraron la puerta en la cara.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "'\nAssistant: Step 1. The idiom in the sentence is 'bad ones never die'\nStep 2. The idiom translates to 'los malos nunca mueren'\nStep 3. Full sentence translates to 'A pesar de sus fracasos constantes, siempre logra regresar: los malos nunca mueren.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\n\nAssistant: Step 1. The idiom in the sentence is 'beggars can't be choosers'\nStep 2. The idiom translates to 'el mendigo no puede ser exigente'\nStep 3. Full sentence translates to 'Después de trabajar todo el día sin comer, el mendigo no puede ser exigente; este pan viejo tiene un sabor delicioso.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'soaked to the bone'\nStep 2. The idiom translates to 'empapado hasta los huesos'\nStep 3. Full sentence translates to 'Con esta tormenta, llegué a casa empapado hasta los huesos.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'thin as a rail'\nStep 2. The idiom translates to 'delgado como un raíl'\nStep 3. Full sentence translates to 'Ha perdido tanto peso que está delgado como un raíl.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": " \t\nAssistant: Step 1. The idiom in the sentence is 'very hot'\nStep 2. The idiom translates to 'estar en forma' or 'estar en buena forma'\nStep 3. Full sentence translates to 'Después de meses en el gimnasio, él está en buena forma.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": " \nAssistant: Step 1. The idiom in the sentence is 'give a damn'\nStep 2. The idiom translates to 'importar un comino'\nStep 3. Full sentence translates to 'No me importa un comino.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'turned into a tomato'\nStep 2. The idiom translates to 'se puso como un tomate'\nStep 3. Full sentence translates to 'Se puso como un tomate cuando olvidó las líneas de la obra de teatro.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'ancient'\nStep 2. The idiom translates to 'antiguo'\nStep 3. Full sentence translates to '¡Tu teléfono es antiguo!'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\n\nAssistant: No te preocupes por ese examen; será pan comido para ti.",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'to be awake'\nStep 2. The idiom translates to 'estar despierto'\nStep 3. Full sentence translates to 'Dudo que estén despiertos todavía. Se acuestan temprano.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'when it rains it pours'\nStep 2. The idiom translates to 'cuando llueve, diluvia'\nStep 3. Full sentence translates to 'Desde que perdió su trabajo, ha tenido problemas por todos lados; cuando llueve, diluvia.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'rip off'\nStep 2. The idiom translates to 'estafar'\nStep 3. Full sentence translates to 'El vendedor de autos trató de estafarme.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "'\nAssistant: Step 1. The idiom in the sentence is 'at a difficult age'\nStep 2. The idiom translates to 'en una edad difícil'\nStep 3. Full sentence translates to 'Mi hijo sólo se queja y se rebela; definitivamente está en una edad difícil.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'has the cat eaten your tongue'\nStep 2. The idiom translates to 'tener la lengua comido por el gato'\nStep 3. Full sentence translates to 'Estás muy callado hoy, ¿el gato se ha comido tu lengua?'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'cost me an arm and a leg'\nStep 2. The idiom translates to 'costar un ojo de la cara'\nStep 3. Full sentence translates to 'Esa nueva computadora me costó un ojo de la cara, pero es de última generación.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'fed up'\nStep 2. The idiom translates to 'estar harto/a'\nStep 3. Full sentence translates to 'Estoy harto/a de tus quejas.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'talk up a storm'\nStep 2. The idiom translates to 'hablar sin parar'\nStep 3. Full sentence translates to 'Mi tía habla sin parar; puede pasar horas contando historias.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'not sleep a wink'\nStep 2. The idiom translates to 'no pegar ojo'\nStep 3. Full sentence translates to 'Estaba tan nervioso por la entrevista que no pegué ojo toda la noche.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": " [Note: The translation provided for this sentence does not reflect the actual meaning or intention of the original sentence. It is recommended to avoid using this type of language when communicating in another language, as idioms and expressions may not always directly translate and can lead to misunderstandings.]",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nStep 1. The idiom in the sentence is 'mince words'\nStep 2. The idiom translates to 'escoger las palabras cuidadosamente'\nStep 3. Full sentence translates to 'Ella no escoge las palabras cuidadosamente, siempre dice lo que piensa, sin importar las consecuencias.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'burned the midnight oil'\nStep 2. The idiom translates to 'quemar el aceite de medianoche'\nStep 3. Full sentence translates to 'Quemé el aceite de medianoche estudiando para el examen final de física.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'joined at the hip'\nStep 2. The idiom translates to 'unidos en la cadera'\nStep 3. Full sentence translates to 'Esos dos están unidos en la cadera; siempre se les ve juntos.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'pulling a leg'\nStep 2. The idiom translates to 'tomando el pelo'\nStep 3. Full sentence translates to 'Mi amigo me dijo que conoció a Kim Kardashian, pero creo que me estuvo tomando el pelo.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nStep 1. The idiom in the sentence is 'Don't sweat the small stuff'\nStep 2. The idiom translates to 'No te preocupes por las pequeñeces'\nStep 3. Full sentence translates to 'No te preocupes por las pequeñeces. No te ahogues en un vaso de agua.' ",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nStep 1. The idiom in the first sentence is 'life makes you lemons'\nStep 2. The idiom translates to 'la vida te da limones'\nStep 3. Full sentence translates to 'Mi novia me dejó por su ex. Pero, cuando la vida te da limones, hay que hacer limonada.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": " \nAssistant: Step 1. The idiom in the sentence is 'act fast and decisive'\nStep 2. The idiom translates to 'actuar rápido y decisivo'\nStep 3. Full sentence translates to 'Debes actuar rápido y decisivo, recuerda que las oportunidades te pasarán de largo.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\n\nAssistant: Step 1. The idiom in the sentence is 'sleep on it'\nStep 2. The idiom translates to 'dormir con eso'\nStep 3. Full sentence translates to 'No sé qué decisión tomar sobre el nuevo contrato; voy a dormir con eso.' ",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'broken down'\nStep 2. The idiom translates to 'averiado' or 'descompuesto'\nStep 3. Full sentence translates to 'Es irónico que el mecánico siempre tenga su automóvil averiado, cuando eres experto en algo, no lo aplicas a tu propia vida.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'when a door closes, a window opens'\nStep 2. The idiom translates to 'cuando se cierra una puerta, se abre una ventana'\nStep 3. Full sentence translates to 'Perdí mi trabajo, pero luego me ofrecieron uno mejor, justo como dicen: cuando se cierra una puerta, se abre una ventana.' ",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "'\nAssistant: Step 1. The idiom in the sentence is 'actions speak louder than words'\nStep 2. The idiom translates to 'las acciones hablan más fuerte que las palabras'\nStep 3. Full sentence translates to 'Puedes prometerme cualquier cosa, pero recuerda que las acciones hablan más fuerte que las palabras'.",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'to have your cake and eat it too'\nStep 2. The idiom translates to 'tener tu pastel y comértelo también'\nStep 3. Full sentence translates to 'Decidí aceptar la oferta de trabajo actual en lugar de esperar por una mejor: es mejor enfocarse en lo que tienes en lugar de lo que no tienes.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'take on more than one can handle'\nStep 2. The idiom translates to 'asumir más de lo que se puede manejar'\nStep 3. Full sentence translates to 'Él asumió más de lo que podía manejar al intentar organizar una boda en un mes.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'make you forget'\nStep 2. The idiom translates to 'hacer que olvides'\nStep 3. Full sentence translates to 'No te preocupes por esa ruptura; una nueva persona te hará olvidar a la antigua.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'focus on'\nStep 2. The idiom translates to 'enfocarse en'\nStep 3. Full sentence translates to 'Intentó darme consejos financieros, pero realmente debería enfocarse en hacer lo que sabe hacer bien.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'leave without saying goodbye'\nStep 2. The idiom translates to 'irse sin despedirse'\nStep 3. Full sentence translates to 'No me gusta hacer mucho ruido cuando me voy, prefiero irme sin despedirme.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nStep 1. The idiom in the sentence is 'an apple doesn’t fall far from the tree'.\nStep 2. The idiom translates to 'de tal palo, tal astilla'.\nStep 3. Full sentence translates to 'El hijo de Roberto también tuvo un romance - de tal palo, tal astilla'.",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "'\nAssistant: Step 1. There are two idioms in this sentence: 'birds of a feather' and 'flock together'\nStep 2. The idioms translate to 'aves de la misma pluma' and 'volar juntos'\nStep 3. Full sentence translates to 'Mira a esos tramposos jugando cartas juntos; aves de la misma pluma vuelan juntas.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "'\nAssistant: Step 1. The idiom in the sentence is 'rested on his laurels'\nStep 2. The idiom translates to 'descansó en sus laureles'\nStep 3. Full sentence translates to 'Después de ganar el premio, descanso en sus laureles y dejó de esforzarse.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nStep 1. The idiom in the sentence is 'pouring water into the sea'\nStep 2. The idiom translates to 'echar agua en el mar'\nStep 3. Full sentence translates to 'Hacer más tareas de las necesarias es como echar agua en el mar.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'adds fuel to the fire'\nStep 2. The idiom translates to 'echar leña al fuego'\nStep 3. Full sentence translates to 'Discutir sobre política solo echa leña al fuego en las reuniones familiares.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'missing a screw'\nStep 2. The idiom translates to 'tener un tornillo suelto'\nStep 3. Full sentence translates to 'Debes tener un tornillo suelto para pensar que puedes correr un maratón sin entrenamiento.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'beat around the bush'\nStep 2. The idiom translates to 'dar vueltas'\nStep 3. Full sentence translates to 'Los políticos suelen dar vueltas cuando se trata de abordar temas controvertidos.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'jump on the [something] bandwagon'\nStep 2. The idiom translates to 'subirse al tren de [algo]'\nStep 3. Full sentence translates to 'Después de ver los beneficios, todos querían subirse al tren de la inversión tecnológica.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "'\nAssistant: Step 1. The idiom in the sentence is 'see everything in roses'\nStep 2. The idiom translates to 'verlo todo de color de rosa'\nStep 3. Full sentence translates to 'Ella siempre es optimista, ella lo ve todo de color de rosa.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nStep 1. The idiom in the sentence is 'happy as a clam'\nStep 2. The idiom translates to 'feliz como una almeja'\nStep 3. Full sentence translates to 'Estaba feliz como una almeja después de recibir la noticia de su ascenso.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'in a bad mood'\nStep 2. The idiom translates to 'de mal humor'\nStep 3. Full sentence translates to 'Él está de mal humor hoy, es mejor no hablarle demasiado.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "'\nAssistant:\n Step 1. The idiom in the sentence is 'couldn't move a muscle'\nStep 2. The idiom translates to 'no poder mover ni un músculo'\nStep 3. Full sentence translates to 'Después del maratón, estaba acabado; no podía mover ni un músculo.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'to be exhausted'\nStep 2. The idiom translates to 'estar agotado'\nStep 3. Full sentence translates to '¿Quieres ir al gimnasio? - No. Estoy agotado/a.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'by the time'\nStep 2. The idiom translates to 'para cuando'\nStep 3. Full sentence translates to 'Para cuando se enteró de la traición, estaba extremadamente enojado.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'in a bad mood'\nStep 2. The idiom translates to 'de mal humor'\nStep 3. Full sentence translates to 'Evita hablar con el jefe hoy, está de mal humor por los resultados de ventas.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'stunned'\nStep 2. The idiom translates to 'asombrado'\nStep 3. Full sentence translates to 'Estuve asombrado cuando anunciaron su compromiso.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'to each their own'\nStep 2. The idiom translates to 'cada uno tiene su gusto'\nStep 3. Full sentence translates to 'No es el tipo de carro que yo compraría, pero cada uno tiene su gusto.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'hit the nail on the head'\nStep 2. The idiom translates to 'dar en el clavo'\nStep 3. Full sentence translates to 'Cuando Jorge sugirió que el problema era con el software y no el hardware, realmente dio en el clavo.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'raining cats and dogs'\nStep 2. The idiom translates to 'lloviendo a cántaros'\nStep 3. Full sentence translates to 'Estábamos en el picnic cuando empezó a llover a cántaros; tuvimos que empacar todo rápidamente y buscar refugio.' ",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'screwed up'\nStep 2. The idiom translates to 'meter la pata'\nStep 3. Full sentence translates to 'Metí la pata al decirle a Sara que la fiesta era una sorpresa; no sabía que era un secreto.' ",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'killing two birds with one stone'\nStep 2. The idiom translates to 'matar dos pájaros de un tiro'\nStep 3. Full sentence translates to 'Al estudiar español, estoy matando dos pájaros de un tiro: mejorando mi currículum y preparándome para el viaje a México.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'flew off the handle'\nStep 2. The idiom translates to 'irse por los aires'\nStep 3. Full sentence translates to 'Se fue por los aires cuando vio que el perro había destrozado los cojines del sofá.'",
+        "finish_reason": "stop"
+    },
+    {
+        "generation": "\nAssistant: Step 1. The idiom in the sentence is 'spared no expense'\nStep 2. The idiom translates to 'no escatimó en gastos'\nStep 3. Full sentence translates to 'El padre de la cumpleañera no escatimó en gastos con esta fiesta.'",
+        "finish_reason": "stop"
+    }
+]
