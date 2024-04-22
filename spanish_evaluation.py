@@ -185,7 +185,7 @@ for i in range(len(list(metric_score_lst.values()))):
     sns.set(style="whitegrid")
     plt.figure(figsize=(12, 8))
     sns.boxplot(x='Scores', y='Method', hue='Dataset', data=df, orient='h')
-    plt.savefig(f'./stats/spanish_{keys[i]}.png')
+    plt.savefig(f'./output/stats/spanish_{keys[i]}.png')
     naive_scores = df['Scores'][df['Method'] == 'Naive Prompting']
     step_scores = df['Scores'][df['Method'] == 'Transidiomation']
     two_shot = df['Scores'][df['Method'] == 'Two-shot']
@@ -227,7 +227,7 @@ data = {
 
 
 # Statistical signigificance test between prompting methods based on evaluation metrics
-# Check out the graph in data/stats/spanish_p_values.png
+# Check out the graph in output/stats/spanish_p_values.png
 df = pd.DataFrame(data)
 sns.set(style="whitegrid")
 plt.figure(figsize=(12, 6))
@@ -239,4 +239,4 @@ plt.ylabel('P-Value', fontsize=14)
 plt.xlabel('Comparison Methods', fontsize=14)
 plt.xticks(rotation=45)  # Rotate x-labels for better readability
 plt.tight_layout()
-plt.savefig(f'./stats/spanish_p_values.png')
+plt.savefig(f'./output/stats/spanish_p_values.png')
