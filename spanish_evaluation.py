@@ -17,27 +17,27 @@ from scipy.spatial.distance import cosine
 import tensorflow as tf
 from bleurt import score
 
-
-def calculate_similarity(embedding1, embedding2):
-    return 1 - cosine(embedding1, embedding2)
+openai.api_key = 'openai-api'
 file_path = './data/csv/spanish_idioms_dataset.csv'  # Replace 'your_file.csv' with the path to your CSV file
 data = pd.read_csv(file_path)
 
-openai.api_key = 'api-key'
+def calculate_similarity(embedding1, embedding2):
+    return 1 - cosine(embedding1, embedding2)
+
 def get_embedding(text):
     response = openai.Embedding.create(
         input=[text],
         engine="text-embedding-3-large")
     return response['data'][0]['embedding']
 
+
 if "idiom embedded in a sentence (Spanish)" in data.columns:
     spanish_idioms = data["idiom embedded in a sentence (Spanish)"].tolist()
 else:
-    print("Column not found. Please check the column name and try again.")
-    
+    print("Column not found. Please check the column name and try again.")  
 reference = spanish_idioms
-methods = ["Naive Prompt Metrics: ","Transidiomation Metrics: ","Two-shot Metrics: "]
-files = ["./data/json/spanish_naive_prompt_output.json","./data/json/spanish_transidiomation_prompt_output.json", "./data/json/spanish_two_shot_prompt_output.json"]
+methods = ["Google Machine Translation", "Naive Prompt Metrics: ","Transidiomation Metrics: ","Two-shot Metrics: "]
+files = ["./data/csv/google_spanish_machine_translation.csv", "./data/json/spanish_naive_prompt_output.json","./data/json/spanish_transidiomation_prompt_output.json", "./data/json/spanish_two_shot_prompt_output.json"]
 
 all_rouge_scores=[]
 all_wer_scores=[]
@@ -45,42 +45,58 @@ all_bleu_scores = []
 all_openai_scores=[]
 all_google_bleurt_scores=[]
 
+
 for prompt_no, file in enumerate(files):
     print(methods[prompt_no])
-    with open(file,'r') as file:  
-        data = json.load(file)
     hypothesis = []
-    if prompt_no == 0:
-        for obj in data:
-            modified = obj["generation"].replace("\n", "")
-            hypothesis.append(modified)
+    # Google translation
+    if not prompt_no:
+        with open(file,"r") as file:
+            data = pd.read_csv(file)
+        for row in data["Machine Translated by Google"]:    
+            hypothesis.append(row)
     
-    elif prompt_no == 1:
-        for obj in data:
-            modified = obj["generation"].replace("\n", "")
-            if "3. " in modified:
-                modified = modified.split("3. ")[1]
-                modified = modified.replace("Spanish translation: ", "")
-                modified = modified.replace("Give a Spanish translation of the sentence including that idiom: ", "")
-                modified = modified.replace("Spanish translation of the sentence:","")
-                modified = modified.replace('"', "")
-                hypothesis.append(modified) 
-            elif "3:" in modified:
-                modified = modified.split("3:")[1]
-                modified = modified.replace('"', "")
-                hypothesis.append(modified)          
-            else:
-                hypothesis.append("")
     else:
-        for obj in data:
-            modified = obj["generation"].replace("\n", "")
-            if "Full sentence translates to " in modified:
-                modified = modified.split("Full sentence translates to")[1]
-                modified = modified.replace("'", "")
+        with open(file,'r') as file:  
+            data = json.load(file)
+        # Naive
+        if prompt_no == 1:
+            for obj in data:
+                modified = obj["generation"].replace("\n", "")
                 hypothesis.append(modified)
-            else:
-                hypothesis.append("")
-    
+        
+        # Transidiomation
+        elif prompt_no == 2:
+            for obj in data:
+                modified = obj["generation"].replace("\n", "")
+                if "3. " in modified:
+                    modified = modified.split("3. ")[1]
+                    modified = modified.replace("Spanish translation: ", "")
+                    modified = modified.replace("Give a Spanish translation of the sentence including that idiom: ", "")
+                    modified = modified.replace("Spanish translation of the sentence:","")
+                    modified = modified.replace('"', "")
+                    hypothesis.append(modified) 
+                
+                elif "3:" in modified:
+                    modified = modified.split("3:")[1]
+                    modified = modified.replace('"', "")
+                    hypothesis.append(modified)          
+                
+                else:
+                    hypothesis.append("")
+        # Two shot
+        else:
+            for obj in data:
+                modified = obj["generation"].replace("\n", "")
+                
+                if "Full sentence translates to " in modified:
+                    modified = modified.split("Full sentence translates to")[1]
+                    modified = modified.replace("'", "")
+                    hypothesis.append(modified)
+                
+                else:
+                    hypothesis.append("")
+        
     # ROUGE metrics
     rouge = Rouge()
     total_scores =0.0
@@ -175,59 +191,72 @@ p_value_lst = []
 # Check out the graph in data/stats/spanish_{evaluation metric}.png
 for i in range(len(list(metric_score_lst.values()))):
     scores = [score for sublist in metric_score_lst[keys[i]] for score in sublist]
-    methods_json = ["Naive Prompting", "Transidiomation", "Two-shot"]
-    labels_json = [methods_json[i] for i, sublist in enumerate(metric_score_lst[keys[i]]) for _ in sublist]
-    scores_json = [score for sublist in metric_score_lst[keys[i]] for score in sublist]
-    scores_total = scores_json
-    labels_total = labels_json
-    dataset = ['Spanish']*len(scores_json)
+    methods_json = ["Google Translation", "Naive Prompting", "Transidiomation", "Two-shot"]
+    labels = [methods_json[i] for i, sublist in enumerate(metric_score_lst[keys[i]]) for _ in sublist]
+    # Create a single dataframe for both datasets
+    scores_total = scores
+    labels_total = labels
+    dataset = ['Spanish']*len(scores_total)
     df = pd.DataFrame({'Scores': scores_total, 'Method': labels_total, 'Dataset': dataset})
+    # Create the plot
     sns.set(style="whitegrid")
     plt.figure(figsize=(12, 8))
     sns.boxplot(x='Scores', y='Method', hue='Dataset', data=df, orient='h')
+    plt.title('Distribution of Evaluation Scores by Prompting Methods', fontsize=20)
+    plt.ylabel('Method', fontsize=16)
+    plt.legend(title='Dataset')
     plt.savefig(f'./output/stats/spanish_{keys[i]}.png')
+    google_scores = df['Scores'][df['Method'] == 'Google Translation']
     naive_scores = df['Scores'][df['Method'] == 'Naive Prompting']
     step_scores = df['Scores'][df['Method'] == 'Transidiomation']
     two_shot = df['Scores'][df['Method'] == 'Two-shot']
-    stat, p_value_naive_step = stats.mannwhitneyu(step_scores, naive_scores, alternative='two-sided')
-    stat, p_value_naive_chain = stats.mannwhitneyu(two_shot, naive_scores, alternative='two-sided')
-    stat, p_value_step_chain = stats.mannwhitneyu(two_shot, step_scores, alternative='two-sided')
-    print(f"P-value for naive vs. Transidiomation: {p_value_naive_step:.3f}")
-    print(f"P-value for naive vs. Two-shot: {p_value_naive_chain:.3f}")
-    print(f"P-value for Transidiomation vs. Two-shot: {p_value_step_chain:.3f}")
-    p_value_lst.append([p_value_naive_step,p_value_naive_chain,p_value_step_chain])
+    stat, p_value_step_google = stats.mannwhitneyu(step_scores, google_scores, alternative='two-sided')
+    stat, p_value_chain_google = stats.mannwhitneyu(two_shot, google_scores, alternative='two-sided')
+    stat, p_value_naive_google = stats.mannwhitneyu(naive_scores, google_scores, alternative='two-sided')
+    stat, p_value_step_naive = stats.mannwhitneyu(step_scores, naive_scores, alternative='two-sided')
+    stat, p_value_chain_naive = stats.mannwhitneyu(two_shot, naive_scores, alternative='two-sided')
+    stat, p_value_chain_step = stats.mannwhitneyu(two_shot, step_scores, alternative='two-sided')
+    print(f"P-value for Transidiomation vs. Google Translation: {p_value_step_google:.3f}")
+    print(f"P-value for Two-shot vs. Google Translation: {p_value_chain_google:.3f}")
+    print(f"P-value for Naive vs. Google Translation: {p_value_naive_google:.3f}")
+    print(f"P-value for Transidiomation vs. Naive: {p_value_step_naive:.3f}")
+    print(f"P-value Two-shot vs. Naive: {p_value_chain_naive:.3f}")
+    print(f"P-value for Two-shot vs. Transidiomation: {p_value_chain_step:.3f}")
+    p_value_lst.append([p_value_step_google,p_value_chain_google,p_value_naive_google,p_value_step_naive,p_value_chain_naive,p_value_chain_step])
 
 
 metric_score_lst  = {"BLEURT": all_google_bleurt_scores,"BLEU" :all_bleu_scores, "ROUGE":all_rouge_scores, "WER": all_wer_scores, "OpenAI": all_openai_scores}
 data = {
     "Comparison": [
-        "Naive vs. Transidiomation", "Naive vs. Two-shot", "Transidiomation vs. Two-shot",
-        "Naive vs. Transidiomation", "Naive vs. Two-shot", "Transidiomation vs. Two-shot",
-        "Naive vs. Transidiomation", "Naive vs. Two-shot", "Transidiomation vs. Two-shot",
-        "Naive vs. Transidiomation", "Naive vs. Two-shot", "Transidiomation vs. Two-shot",
-        "Naive vs. Transidiomation", "Naive vs. Two-shot", "Transidiomation vs. Two-shot"
+        "Naive vs. Transidiomation", "Naive vs. Two-shot", "Transidiomation vs. Two-shot", "Google Translation vs. Naive", "Google Translation vs. Transidiomation", "Google Translation vs. Two-shot",
 
+        "Naive vs. Transidiomation", "Naive vs. Two-shot", "Transidiomation vs. Two-shot", "Google Translation vs. Naive", "Google Translation vs. Transidiomation", "Google Translation vs. Two-shot",
+
+        "Naive vs. Transidiomation", "Naive vs. Two-shot", "Transidiomation vs. Two-shot", "Google Translation vs. Naive", "Google Translation vs. Transidiomation", "Google Translation vs. Two-shot",
+
+        "Naive vs. Transidiomation", "Naive vs. Two-shot", "Transidiomation vs. Two-shot", "Google Translation vs. Naive", "Google Translation vs. Transidiomation", "Google Translation vs. Two-shot",
+
+        "Naive vs. Transidiomation", "Naive vs. Two-shot", "Transidiomation vs. Two-shot", "Google Translation vs. Naive", "Google Translation vs. Transidiomation", "Google Translation vs. Two-shot"
     ],
     "Metric": [
-        "OpenAI", "OpenAI", "OpenAI",
-        "BLEURT", "BLEURT",  "BLEURT",
-        "ROUGE","ROUGE","ROUGE",
-        "WER","WER","WER",
-        "BLEU","BLEU","BLEU"
+        "OpenAI", "OpenAI", "OpenAI", "OpenAI", "OpenAI", "OpenAI",
+        "BLEURT", "BLEURT",  "BLEURT", "BLEURT", "BLEURT",  "BLEURT",
+        "ROUGE","ROUGE","ROUGE","ROUGE","ROUGE","ROUGE",
+        "WER","WER","WER","WER","WER","WER",
+        "BLEU","BLEU","BLEU", "BLEU","BLEU","BLEU"
         
     ],
     "P-Value": [
-        p_value_lst[4][0],p_value_lst[4][1],p_value_lst[4][2],
-        p_value_lst[0][0],p_value_lst[0][1],p_value_lst[0][2],
-        p_value_lst[2][0], p_value_lst[2][1],p_value_lst[2][2],
-        p_value_lst[3][0], p_value_lst[3][1], p_value_lst[3][2],
-        p_value_lst[1][0],p_value_lst[1][1],p_value_lst[1][2]
+        p_value_lst[4][3],p_value_lst[4][4],p_value_lst[4][5], p_value_lst[4][2],p_value_lst[4][0],p_value_lst[4][1],
+        p_value_lst[0][3],p_value_lst[0][4],p_value_lst[0][5], p_value_lst[0][2],p_value_lst[0][0],p_value_lst[0][1],
+        p_value_lst[2][3], p_value_lst[2][4],p_value_lst[2][5], p_value_lst[2][2], p_value_lst[2][0],p_value_lst[2][1],
+        p_value_lst[3][3], p_value_lst[3][4], p_value_lst[3][5], p_value_lst[3][2], p_value_lst[3][0], p_value_lst[3][1],
+        p_value_lst[1][3],p_value_lst[1][4],p_value_lst[1][5],  p_value_lst[1][2],p_value_lst[1][0],p_value_lst[1][1]
     ]
 }
 
-
-# Statistical signigificance test between prompting methods based on evaluation metrics
-# Check out the graph in output/stats/spanish_p_values.png
+# # Statistical signigificance test between prompting methods based on evaluation metrics
+# # Check out the graph in output/stats/spanish_p_values.png
 df = pd.DataFrame(data)
 sns.set(style="whitegrid")
 plt.figure(figsize=(12, 6))
