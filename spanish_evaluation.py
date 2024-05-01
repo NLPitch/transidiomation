@@ -17,7 +17,7 @@ from scipy.spatial.distance import cosine
 import tensorflow as tf
 from bleurt import score
 
-openai.api_key = 'openai-api'
+openai.api_key = 'openai-key'
 file_path = './data/csv/spanish_idioms_dataset.csv'  # Replace 'your_file.csv' with the path to your CSV file
 data = pd.read_csv(file_path)
 
@@ -36,7 +36,7 @@ if "idiom embedded in a sentence (Spanish)" in data.columns:
 else:
     print("Column not found. Please check the column name and try again.")  
 reference = spanish_idioms
-methods = ["Google Machine Translation", "Naive Prompt Metrics: ","Transidiomation Metrics: ","Two-shot Metrics: "]
+methods = ["Google Machine Translation", "Naive Prompt Metrics: ","Proposed Method Metrics: ","Two-shot Metrics: "]
 files = ["./data/csv/google_spanish_machine_translation.csv", "./data/json/spanish_naive_prompt_output.json","./data/json/spanish_transidiomation_prompt_output.json", "./data/json/spanish_two_shot_prompt_output.json"]
 
 all_rouge_scores=[]
@@ -44,6 +44,7 @@ all_wer_scores=[]
 all_bleu_scores = []
 all_openai_scores=[]
 all_google_bleurt_scores=[]
+
 
 
 for prompt_no, file in enumerate(files):
@@ -65,7 +66,7 @@ for prompt_no, file in enumerate(files):
                 modified = obj["generation"].replace("\n", "")
                 hypothesis.append(modified)
         
-        # Transidiomation
+        # Proposed Method
         elif prompt_no == 2:
             for obj in data:
                 modified = obj["generation"].replace("\n", "")
@@ -170,7 +171,6 @@ for prompt_no, file in enumerate(files):
         'median': np.median(similarities),
         'std_dev': np.std(similarities)
     }
-    
     all_openai_scores.append(similarities)
     print("\tRouge F1 Statistics: \n", "\t\tMean ROUGE-1 F1: ", rouge_statistics["mean"],"\n\t\tMedian ROUGE-1 F1: ",rouge_statistics["median"],"\n\t\tStd. Deviation ROUGE-1 F1: " , rouge_statistics["std_deviation"])
     print("\tWord Error Rate Statistics: \n", "\t\tMean WER: ", wer_statistics["mean"], "\n\t\tMedian WER: ", wer_statistics['median'], "\n\t\tStd. Deviation WER: ", wer_statistics['std_deviation'] )
@@ -178,21 +178,20 @@ for prompt_no, file in enumerate(files):
     print("\tOpenAI Statistics: \n", "\tMean OpenAI: ", openai_statistics["mean"],"\n\t\tMedian OpenAI: ",openai_statistics["median"],"\n\t\tStd. Deviation OpenAI: " , openai_statistics["std_dev"])
     print("\tGoogle BLEURT Statistics: \n", "\tMean Google BLEURT: ", google_statistics["mean"],"\n\t\tMedian Google BLEURT: ",google_statistics["median"],"\n\t\tStd. Deviation Google BLEURT: " , google_statistics["std_dev"])
     print("\tError Percentage: ",((len(data)-len(rouge_f1_scores))/len(data))*100, "%")
-
-
+    
+    
 mpl.rcParams['font.family'] = 'serif'
 mpl.rcParams['font.serif'] = 'Times New Roman'  # Specify the sans-serif font you want to use
-metric_score_lst  = {"BLEURT": all_google_bleurt_scores,"BLEU" :all_bleu_scores, "ROUGE":all_rouge_scores, "WER": all_wer_scores, "OpenAI": all_openai_scores}
-keys = list(metric_score_lst.keys())
 p_value_lst = []
-
-
+metric_score_lst= {"BLEURT":all_google_bleurt_scores,"BLEU":all_bleu_scores,"ROUGE":all_rouge_scores,"WER":all_wer_scores, "OpenAI":all_openai_scores}
+keys = list(metric_score_lst.keys())
 # Generating stats and graphs for all metrics
 # Check out the graph in data/stats/spanish_{evaluation metric}.png
 for i in range(len(list(metric_score_lst.values()))):
-    scores = [score for sublist in metric_score_lst[keys[i]] for score in sublist]
-    methods_json = ["Google Translation", "Naive Prompting", "Transidiomation", "Two-shot"]
-    labels = [methods_json[i] for i, sublist in enumerate(metric_score_lst[keys[i]]) for _ in sublist]
+    print(keys[i])
+    scores = [score for sublist in metric_score_lst[keys[i]][:3] for score in sublist]
+    methods_json = ["Google Translation", "Naive Prompting", "Proposed Method"]
+    labels = [methods_json[i] for i, sublist in enumerate(metric_score_lst[keys[i]][:3]) for _ in sublist]
     # Create a single dataframe for both datasets
     scores_total = scores
     labels_total = labels
@@ -208,55 +207,51 @@ for i in range(len(list(metric_score_lst.values()))):
     plt.savefig(f'./output/stats/spanish_{keys[i]}.png')
     google_scores = df['Scores'][df['Method'] == 'Google Translation']
     naive_scores = df['Scores'][df['Method'] == 'Naive Prompting']
-    step_scores = df['Scores'][df['Method'] == 'Transidiomation']
-    two_shot = df['Scores'][df['Method'] == 'Two-shot']
+    step_scores = df['Scores'][df['Method'] == 'Proposed Method']
+    all_scores = [list(google_scores), list(naive_scores), list(step_scores)]
+    count =0
+    total_scores =0
     stat, p_value_step_google = stats.mannwhitneyu(step_scores, google_scores, alternative='two-sided')
-    stat, p_value_chain_google = stats.mannwhitneyu(two_shot, google_scores, alternative='two-sided')
     stat, p_value_naive_google = stats.mannwhitneyu(naive_scores, google_scores, alternative='two-sided')
     stat, p_value_step_naive = stats.mannwhitneyu(step_scores, naive_scores, alternative='two-sided')
-    stat, p_value_chain_naive = stats.mannwhitneyu(two_shot, naive_scores, alternative='two-sided')
-    stat, p_value_chain_step = stats.mannwhitneyu(two_shot, step_scores, alternative='two-sided')
-    print(f"P-value for Transidiomation vs. Google Translation: {p_value_step_google:.3f}")
-    print(f"P-value for Two-shot vs. Google Translation: {p_value_chain_google:.3f}")
+    print(f"P-value for Proposed Method vs. Google Translation: {p_value_step_google:.3f}")
     print(f"P-value for Naive vs. Google Translation: {p_value_naive_google:.3f}")
-    print(f"P-value for Transidiomation vs. Naive: {p_value_step_naive:.3f}")
-    print(f"P-value Two-shot vs. Naive: {p_value_chain_naive:.3f}")
-    print(f"P-value for Two-shot vs. Transidiomation: {p_value_chain_step:.3f}")
-    p_value_lst.append([p_value_step_google,p_value_chain_google,p_value_naive_google,p_value_step_naive,p_value_chain_naive,p_value_chain_step])
+    print(f"P-value for Proposed Method vs. Naive: {p_value_step_naive:.3f}")
+    p_value_lst.append([p_value_step_naive, p_value_naive_google, p_value_step_google])
 
 
-metric_score_lst  = {"BLEURT": all_google_bleurt_scores,"BLEU" :all_bleu_scores, "ROUGE":all_rouge_scores, "WER": all_wer_scores, "OpenAI": all_openai_scores}
 data = {
     "Comparison": [
-        "Naive vs. Transidiomation", "Naive vs. Two-shot", "Transidiomation vs. Two-shot", "Google Translation vs. Naive", "Google Translation vs. Transidiomation", "Google Translation vs. Two-shot",
+        "Naive vs. Proposed Method", "Google Translation vs. Naive", "Google Translation vs. Proposed Method",
 
-        "Naive vs. Transidiomation", "Naive vs. Two-shot", "Transidiomation vs. Two-shot", "Google Translation vs. Naive", "Google Translation vs. Transidiomation", "Google Translation vs. Two-shot",
+        "Naive vs. Proposed Method", "Google Translation vs. Naive", "Google Translation vs. Proposed Method",
 
-        "Naive vs. Transidiomation", "Naive vs. Two-shot", "Transidiomation vs. Two-shot", "Google Translation vs. Naive", "Google Translation vs. Transidiomation", "Google Translation vs. Two-shot",
+        "Naive vs. Proposed Method", "Google Translation vs. Naive", "Google Translation vs. Proposed Method",
 
-        "Naive vs. Transidiomation", "Naive vs. Two-shot", "Transidiomation vs. Two-shot", "Google Translation vs. Naive", "Google Translation vs. Transidiomation", "Google Translation vs. Two-shot",
+        "Naive vs. Proposed Method", "Google Translation vs. Naive", "Google Translation vs. Proposed Method",
 
-        "Naive vs. Transidiomation", "Naive vs. Two-shot", "Transidiomation vs. Two-shot", "Google Translation vs. Naive", "Google Translation vs. Transidiomation", "Google Translation vs. Two-shot"
+        "Naive vs. Proposed Method", "Google Translation vs. Naive", "Google Translation vs. Proposed Method"
     ],
     "Metric": [
-        "OpenAI", "OpenAI", "OpenAI", "OpenAI", "OpenAI", "OpenAI",
-        "BLEURT", "BLEURT",  "BLEURT", "BLEURT", "BLEURT",  "BLEURT",
-        "ROUGE","ROUGE","ROUGE","ROUGE","ROUGE","ROUGE",
-        "WER","WER","WER","WER","WER","WER",
-        "BLEU","BLEU","BLEU", "BLEU","BLEU","BLEU"
+        "OpenAI", "OpenAI", "OpenAI",
+        "BLEURT", "BLEURT",  "BLEURT",
+        "ROUGE","ROUGE","ROUGE",
+        "WER","WER","WER",
+        "BLEU","BLEU","BLEU",
         
     ],
     "P-Value": [
-        p_value_lst[4][3],p_value_lst[4][4],p_value_lst[4][5], p_value_lst[4][2],p_value_lst[4][0],p_value_lst[4][1],
-        p_value_lst[0][3],p_value_lst[0][4],p_value_lst[0][5], p_value_lst[0][2],p_value_lst[0][0],p_value_lst[0][1],
-        p_value_lst[2][3], p_value_lst[2][4],p_value_lst[2][5], p_value_lst[2][2], p_value_lst[2][0],p_value_lst[2][1],
-        p_value_lst[3][3], p_value_lst[3][4], p_value_lst[3][5], p_value_lst[3][2], p_value_lst[3][0], p_value_lst[3][1],
-        p_value_lst[1][3],p_value_lst[1][4],p_value_lst[1][5],  p_value_lst[1][2],p_value_lst[1][0],p_value_lst[1][1]
+        p_value_lst[4][0],p_value_lst[4][1],p_value_lst[4][2], 
+        p_value_lst[0][0],p_value_lst[0][1],p_value_lst[0][2],
+        p_value_lst[2][0], p_value_lst[2][1],p_value_lst[2][2],
+        p_value_lst[3][0], p_value_lst[3][1], p_value_lst[3][2],
+        p_value_lst[1][0],p_value_lst[1][1],p_value_lst[1][2],
     ]
 }
 
-# # Statistical signigificance test between prompting methods based on evaluation metrics
-# # Check out the graph in output/stats/spanish_p_values.png
+
+# Statistical signigificance test between prompting methods based on evaluation metrics
+# Check out the graph in output/stats/spanish_p_values.png
 df = pd.DataFrame(data)
 sns.set(style="whitegrid")
 plt.figure(figsize=(12, 6))
@@ -269,3 +264,68 @@ plt.xlabel('Comparison Methods', fontsize=14)
 plt.xticks(rotation=45)  # Rotate x-labels for better readability
 plt.tight_layout()
 plt.savefig(f'./output/stats/spanish_p_values.png')
+# Final graphs for korean and spanish
+metric_files =["./data/csv/kr_bleurt.csv", "./data/csv/kr_rouge.csv"]
+korean_metric_score_lst = []
+# each evaluation method has four lists that corresponds to the prompting method 
+
+for fp in metric_files:
+    with open(fp) as file:
+        korean_metric_score_lst.append(pd.read_csv(file))
+        
+        
+metric_score_lst= {"BLEURT":all_google_bleurt_scores,"ROUGE":all_rouge_scores}
+# need to add "WER":all_wer_scores
+keys = list(metric_score_lst.keys())
+for i in range(len(list(metric_score_lst.values()))):
+    
+    scores = [score for sublist in metric_score_lst[keys[i]][:3] for score in sublist]
+    methods = ["Google Translation", "Naive Prompting", "Proposed Method"]
+    labels = [methods[i] for i, sublist in enumerate(metric_score_lst[keys[i]][:3]) for _ in sublist]
+    # Create a single dataframe for both datasets
+
+    # Prepare the Korean scores
+    google_kr = korean_metric_score_lst[i]["google_translate"].tolist()
+    naive_kr = korean_metric_score_lst[i]['naive_gpt'].tolist()
+    trans_kr = korean_metric_score_lst[i]["transidiomation"].tolist()
+    # Group the Korean scores
+    all_google_bleurt_scores_kr = [google_kr, naive_kr, trans_kr]
+    labels_kr = [methods[i] for i, sublist in enumerate(all_google_bleurt_scores_kr) for _ in sublist]
+    scores_kr = [score for sublist in all_google_bleurt_scores_kr for score in sublist]
+    # Create a single dataframe for both datasets
+    scores_total = scores_kr + scores
+    labels_total = labels_kr + labels
+    
+    dataset = ['Korean']*len(scores_kr) + ['Spanish']*len(scores)
+    df = pd.DataFrame({'Scores': scores_total, 'Method': labels_total, 'Dataset': dataset})
+    all_scores = [google_kr, naive_kr, trans_kr]
+# Calculate Q1 and Q3
+    count =0
+    total_scores =0
+    for scores in all_scores:
+        total_scores += len(scores)
+        scores = pd.DataFrame(scores)
+        Q1 = scores.quantile(0.25)
+        Q3 = scores.quantile(0.75)
+        # Calculate the IQR
+        IQR = Q3 - Q1
+        # Define bounds for outliers
+        lower_bound = Q1 - 1.5 * IQR
+        upper_bound = Q3 + 1.5 * IQR
+        # Identify outliers
+        method_lower_outliers = (scores < lower_bound)
+        method_upper_outliers = (scores > upper_bound)
+        
+        # Append to the outliers DataFrame
+        count += method_lower_outliers.iloc[:, 0].sum()
+        count += method_upper_outliers.iloc[:, 0].sum()
+    print(keys[i] ," ERROR RATE: ",count/total_scores)
+    # Create the plot
+    sns.set(style="whitegrid")
+    plt.figure(figsize=(12, 8))
+    sns.boxplot(x='Scores', y='Method', hue='Dataset', data=df, orient='h')
+    plt.title(f'Distribution of Evaluation Score by Prompting Methods')
+    plt.xlabel(f'{keys[i]} Score', fontsize=20)
+    plt.ylabel('Method', fontsize=20)
+    plt.legend(title='Dataset')
+    plt.savefig(f'./output/stats/results_spain_korea_{keys[i]}.png')

@@ -29,8 +29,8 @@ if __name__=="__main__":
 
 
     # Uncomment for TRANSIDIOMATION PROMPTING
-    # head_prompt = ["Translate the sentences into Spanish by following these steps:\nStep 1. Identify the idiom.\nStep 2. Find an idiom with the same meaning in the target language. If there is no equivalent idiom, give the figurative meaning of it. If there is no equivalent idiom, translate the idiom according to its meaning.\nStep 3. Include response from Step 2 to translate the sentence."]
-    # file_path = ["./data/json/spanish_transidiomation_prompt_output.json"]
+    head_prompt = ["Translate the sentences into Spanish by following these steps:\nStep 1. Identify the idiom.\nStep 2. Find an idiom with the same meaning in the target language. If there is no equivalent idiom, give the figurative meaning of it. If there is no equivalent idiom, translate the idiom according to its meaning.\nStep 3. Include response from Step 2 to translate the sentence., User: 'When I learn Spanish at the Spanish Academy exams are a piece of cake.'\nAssistant: Step 1. The idiom in the sentence is 'a piece of cake'\n Step 2. The idiom translates to 'pan comido'\nStep3. Cuando aprendo espanol en 'The Spanish Academy' los examenes son pan comido. , User: 'Whenever I try to concentrate in math class, I end up having my head in the clouds.'\nAssistant: Step 1. The idiom in the sentence is 'head in the clouds'\nStep 2. The idiom translates to 'estar en las nubes'\nStep 3. Siempre que intento concentrarme en la clase de matemáticas, termino estando en las nubes."]
+    file_path = ["./data/json/spanish_transidiomation_prompt_output.json"]
 
     # Uncomment for TWO SHOT PROMPTING
     # head_prompt = ["User: 'When I learn Spanish at the Spanish Academy exams are a piece of cake.'\nAssistant: Step 1. The idiom in the sentence is 'a piece of cake'\n Step 2. The idiom translates to 'pan comido'\nStep3. Full sentence translates to 'Cuando aprendo espanol en 'The Spanish Academy' los examenes son pan comido.' , User: 'Whenever I try to concentrate in math class, I end up having my head in the clouds.'\nAssistant: Step 1. The idiom in the sentence is 'head in the clouds'\nStep 2. The idiom translates to 'estar en las nubes'\nStep 3. Full sentence translates to 'Siempre que intento concentrarme en la clase de matemáticas, termino estando en las nubes.'"]
@@ -49,3 +49,6 @@ if __name__=="__main__":
         openai_caller_completion(prompts, file_path[method])
         
         
+
+
+
