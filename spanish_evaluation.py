@@ -17,7 +17,7 @@ from scipy.spatial.distance import cosine
 import tensorflow as tf
 from bleurt import score
 
-openai.api_key = 'openai-key'
+openai.api_key = ''
 file_path = './data/csv/spanish_idioms_dataset.csv'  # Replace 'your_file.csv' with the path to your CSV file
 data = pd.read_csv(file_path)
 
@@ -265,7 +265,7 @@ plt.xticks(rotation=45)  # Rotate x-labels for better readability
 plt.tight_layout()
 plt.savefig(f'./output/stats/spanish_p_values.png')
 # Final graphs for korean and spanish
-metric_files =["./data/csv/kr_bleurt.csv", "./data/csv/kr_rouge.csv"]
+metric_files =["./data/csv/kr_bleurt.csv", "./data/csv/kr_rouge.csv", "./data/csv/kr_wer.csv"]
 korean_metric_score_lst = []
 # each evaluation method has four lists that corresponds to the prompting method 
 
@@ -274,8 +274,7 @@ for fp in metric_files:
         korean_metric_score_lst.append(pd.read_csv(file))
         
         
-metric_score_lst= {"BLEURT":all_google_bleurt_scores,"ROUGE":all_rouge_scores}
-# need to add "WER":all_wer_scores
+metric_score_lst= {"BLEURT":all_google_bleurt_scores,"ROUGE":all_rouge_scores, "WER":all_wer_scores}
 keys = list(metric_score_lst.keys())
 for i in range(len(list(metric_score_lst.values()))):
     
