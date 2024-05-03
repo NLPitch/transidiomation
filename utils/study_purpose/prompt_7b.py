@@ -1,37 +1,57 @@
+import torch
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+
 from transformers import AutoModelForCausalLM, AutoTokenizer
-# # Mistral Model
-# model = AutoModelForCausalLM.from_pretrained(
-#     'mistralai/Mistral-7B-Instruct-v0.2',
-#     device_map = 'auto'
-# ).to(device)
-# tokenizer = AutoTokenizer.from_pretrained("mistralai/Mistral-7B-Instruct-v0.2")
+from utils.load_data import *
 
-# def prompt_mistral(source_text:str) -> str:
-#     messages = [{"role": "user", "content": f"Identify the idiom in {source_text}"}]
-#     # messages = [{"role": "user", "content": f"Translate {source_text} from Korean to English"}]
+# Mistral Model
+model = AutoModelForCausalLM.from_pretrained(
+    'mistralai/Mistral-7B-Instruct-v0.2',
+    device_map = 'auto'
+).to(device)
+tokenizer = AutoTokenizer.from_pretrained("mistralai/Mistral-7B-Instruct-v0.2")
 
-#     # messages = create_prompt_to_model(0, source_text, 'Korean', 'English')
+def prompt_mistral_naive(input_sentence:str, target_language:str) -> str:
+    messages = [{"role": "user", "content": f"Translate {input_sentence} to {target_language}"}]
 
-#     encoded = tokenizer.apply_chat_template(messages, return_tensors="pt")
-#     model_inputs = encoded.to(device)
+    encoded = tokenizer.apply_chat_template(messages, return_tensors="pt")
+    model_inputs = encoded.to(device)
 
-#     generated_ids = model.generate(model_inputs, max_new_tokens=1000, do_sample=True)
-#     decoded = tokenizer.batch_decode(generated_ids)
+    generated_ids = model.generate(model_inputs, max_new_tokens=1000, do_sample=True)
+    decoded = tokenizer.batch_decode(generated_ids)
 
-#     return decoded[0].split('[/INST]')[1]
-# # .split('[/INST]')
-# # tokenizer = AutoTokenizer.from_pretrained("google/gemma-7b-it")
-# # model = AutoModelForCausalLM.from_pretrained("google/gemma-7b-it", device_map="auto").to(device)
+    return decoded[0].split('[/INST]')[1]
 
-# def prompt_gemma(source_text:str) -> str:
-#     # messages = [{"role": "user", "content": f"Translate {source_text} from Korean to English"}]
-#     messages = [{"role": "user", "content": f"Identify the idiom in {source_text}"}]
-#     prompt = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+def prompt_mistral_transidiomation(input_sentence:str, target_language:str) -> str:
+    message = [
+        {"role": "user", "content": f'''
+            Translate the sentence '원숭이도 나무에서 떨어질 때가 있나 보다.' to {target_language} following these steps:
+            Step 1. Identify the idiom
+            Step 2. Find an idiom with the same meaning in the target language. If there is no equivalent idiom, give the figurative meaning of the expression.
+            Step 3. Include answer from Step 2 to translate the sentence.
+        '''},
+        {'role': 'assistant', 'content': 'Step 1. 원숭이도 나무에서 떨어진다 Step 2. Even Homer sometimes nod Step 3. I guess even Homer sometimes nods.'},
 
-#     inputs = tokenizer.encode(prompt, add_special_tokens=False, return_tensors="pt")
-#     outputs = model.generate(input_ids=inputs.to(model.device), max_new_tokens=1000, do_sample=True)
-#     decoded = tokenizer.decode(outputs[0])
+        {"role": "user", "content": f'''
+            Translate the sentence '그 여자는 내 남자친구에게 꼬리를 쳤다.' to {target_language} following these steps:
+            Step 1. Identify the idiom
+            Step 2. Find an idiom with the same meaning in the target language. If there is no equivalent idiom, give the figurative meaning of the expression.
+            Step 3. Include answer from Step 2 to translate the sentence.
+        '''},
+        {'role': 'assistant', 'content': 'Step 1. 꼬리를 치다 Step 2. To flirt Step 3. She’s always flirting with my boyfriend!'},
 
-#     print(decoded)
+        {"role": "user", "content": f'''
+            Translate the sentence '{input_sentence}' to {target_language} following these steps:
+            Step 1. Identify the idiom
+            Step 2. Find an idiom with the same meaning in the target language. If there is no equivalent idiom, give the figurative meaning of the expression.
+            Step 3. Include answer from Step 2 to translate the sentence.
+        '''},
+    ]
 
-#     return decoded.split('<start_of_turn>model')[1]
+    encoded = tokenizer.apply_chat_template(message, return_tensors="pt")
+    model_inputs = encoded.to(device)
+
+    generated_ids = model.generate(model_inputs, max_new_tokens=1000, do_sample=True)
+    decoded = tokenizer.batch_decode(generated_ids)
+
+    return decoded[0]
