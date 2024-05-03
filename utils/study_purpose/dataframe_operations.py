@@ -1,4 +1,5 @@
 import polars as pl
+import random
 
 def group_by_aggregate(pl_data, group_by_factor:str):
 
@@ -19,3 +20,15 @@ def group_by_and_random_representation(pl_data, group_by_factor:str):
 
 def random_row_seleection(pl_data, size:int):
     return pl_data.sample(n=size)
+
+def shuffling(dict_items:dict)->dict:
+    items = list(dict_items.values())
+    
+    ordering = [0, 1, 2]
+    random.shuffle(ordering)
+
+    items_shuffled = []
+    for idx, i in enumerate(ordering):
+        items_shuffled.append(items[i])
+
+    return {'shuffled': items_shuffled, 'order': ordering}

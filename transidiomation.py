@@ -3,14 +3,12 @@ import logging
 import argparse
 import configparser
 
-import pickle
 import polars as pl
 import polars.selectors as cs
 
 from utils.load_data import load_data
 from utils.data_conversion import *
 from utils.save_data import save_data
-# from utils.dataframe_operations import *
 from utils.translation_methods import *
 # from utils.evaluate_translation import *
 

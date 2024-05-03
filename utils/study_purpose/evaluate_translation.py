@@ -40,15 +40,6 @@ def evaluate_with_bleurt(struct_input:dict, reference_col:str, prediction_col:st
 
     return results['scores']
 
-def evaluate_with_ter(list_predictions:list, list_references:list):
-    ter = evaluate.load("ter")
-
-    predictions = ["hello there", "general kenobi"]
-    references = ["hello there", "general kenobi"]
-
-    results = ter.compute(predictions=predictions, references=references, case_sensitive=True)
-    print('ter', results)
-
 def evaluate_with_meteor(struct_input:dict, reference_col:str, prediction_col:str):
     list_prediction = [str(struct_input[prediction_col])]
     list_reference = [str(struct_input[reference_col])]
