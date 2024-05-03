@@ -19,3 +19,6 @@ def convert_csv_to_pkl(input_directory:str, input_filename:str, output_directory
 
     except:
         return -1
+    
+def convert_csv_to_dictionary(pl_data, key_column:str, value_column:str) -> dict:
+    return dict(zip(pl_data[key_column], pl_data[value_column]))

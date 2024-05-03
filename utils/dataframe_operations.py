@@ -2,7 +2,7 @@ import polars as pl
 
 def group_by_aggregate(pl_data, group_by_factor:str):
 
-    return pl_data.group_by(group_by_aggregate).agg([pl.all()])
+    return pl_data.group_by(group_by_factor).agg([pl.all()])
 
 def group_by_and_random_representation(pl_data, group_by_factor:str):
     pl_data = pl_data.select(
@@ -18,5 +18,4 @@ def group_by_and_random_representation(pl_data, group_by_factor:str):
     return pl_data
 
 def random_row_seleection(pl_data, size:int):
-
     return pl_data.sample(n=size)
