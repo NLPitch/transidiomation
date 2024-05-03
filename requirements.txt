@@ -1,0 +1,18 @@
+accelerate==0.28.0
+BLEURT @ git+https://github.com/google-research/bleurt.git@cebe7e6f996b40910cfaa520a63db47807e3bf5c
+easygoogletranslate==0.0.4
+huggingface-hub==0.21.3
+langdetect==1.0.9
+openai==1.16.1
+pandas==2.2.1
+polars==0.20.13
+rouge_score==0.1.2
+sacrebleu==2.4.2
+tensorflow==2.16.1
+tokenizers==0.15.2
+torch==2.2.0+cu118
+torchaudio==2.2.0+cu118
+torchvision==0.17.0+cu118
+tqdm==4.66.2
+transformers==4.38.2
+xlsx2csv==0.8.2

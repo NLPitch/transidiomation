@@ -15,6 +15,9 @@ def load_data(full_filename: str):
         case '.xlsx':
             return load_xlsx(full_filename)
 
+        case '.json':
+            return load_json(full_filename)
+
         case _:
             print('Unsupported file type')
             return -1
@@ -28,3 +31,6 @@ def load_csv(full_filename: str):
 
 def load_xlsx(full_filename: str):
     return pl.read_excel(full_filename)
+
+def load_json(full_filename: str):
+    return pl.read_json(full_filename)
