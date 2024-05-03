@@ -1,5 +1,5 @@
 # Transidiomation
-Transidiomation is a prompting framework designed to improve quality of translation on sentences embedded with an idiomatic expression. Further details on the project can be found [here](link to pdf).
+Transidiomation is a prompting framework designed to improve quality of translation on sentences embedded with an idiomatic expression. Further details on the project can be found [here]([link to pdf](https://github.com/NLPitch/transidiomation/blob/main/NLPitch_Final_Report.pdf)).
 
 ## Install
 Tranidiomation requires Python version >= 3.10.0. Packages required to use the prompting framework can be installed with the following lines:
